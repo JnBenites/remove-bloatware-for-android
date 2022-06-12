@@ -39,7 +39,6 @@ adb shell pm uninstall -k --user 0 com.sec.android.soagent
 adb shell pm uninstall -k --user 0 com.sec.android.app.shealth
 adb shell pm uninstall -k --user 0 com.sec.android.widgetapp.webmanual
 adb shell pm uninstall -k --user 0 com.linkedin.android
-adb shell pm uninstall -k --user 0 com.osp.app.signin
 adb shell pm uninstall -k --user 0 com.samsung.android.coreapps
 adb shell pm uninstall -k --user 0 com.samsung.android.beaconmanager
 adb shell pm uninstall -k --user 0 com.samsung.android.app.simplesharing
@@ -64,7 +63,7 @@ adb shell pm uninstall -k --user 0 com.samsung.knox.appsupdateagent
 adb shell pm uninstall -k --user 0 com.sec.knox.foldercontainer
 adb shell pm uninstall -k --user 0 com.samsung.knox.securefolder.setuppage
 adb shell pm uninstall -k --user 0 com.samsung.knox.securefolder
-adb shell pm uninstall -k --user 0 package:com.sec.knox.kss
+adb shell pm uninstall -k --user 0 com.sec.knox.kss
 adb shell pm uninstall -k --user 0 com.sec.knox.knoxsetupwizardclient
 echo #######################################
 echo		Removing Microsoft Bloatware
