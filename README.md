@@ -11,7 +11,7 @@ A simple tool to uninstall multiple bloat apps with a single command. To run it 
 * Reiniciar el dispositivo rápidamente mediante ADB.
 
 ### Requirements
-* [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb.html)
+* [Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)
 
 ### Demo
 ![Image text](/screenshot.png)#
