@@ -8,7 +8,7 @@ A simple tool to uninstall multiple bloat apps with a single command. To run it 
 #### AutoUninstallApps.bat
 * Uninstall bloat apps from Samsung devices.
 #### RebootSystemNow.bat
-* Reiniciar el dispositivo rápidamente mediante ADB.
+* Reboot the device quickly using ADB.
 
 ### Requirements
 * [Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)
