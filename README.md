@@ -4,7 +4,7 @@ A simple tool to uninstall multiple bloat apps with a single command. To run it 
 ### Descriptions
 
 #### ListDeviceApps.bat
-* Save list of names of applications installed on the device. ListPackages.txt :page_facing_up:
+* Save list of names of applications installed on the device. -> ListPackages.txt :page_facing_up:
 #### AutoUninstallApps.bat
 * Uninstall bloat apps from Samsung devices. :package:
 #### RebootSystemNow.bat
