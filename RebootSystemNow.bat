@@ -1,14 +1,17 @@
-@Echo Off
-color 02
-echo #######################################
-echo		Checking for Devices.
-echo #######################################
+
+@ECHO Off
+
+:: check device
+ECHO Checking for Devices
+
+::Connect device
 adb devices
-ECHO Is device present?
-ECHO (Press Enter if yes, Ctrl+C or close Script if not)
+echo Is device present?
+echo (Press Enter if yes, Ctrl+C or close Script if not)
 pause
-echo #######################################
-echo		Reboot system
-echo #######################################
-adb reboot
+
+echo .....	Reboot system
+:: reboot device
+	adb reboot
+
 pause
