@@ -111,6 +111,8 @@ echo 	cloud service
 	adb shell pm uninstall -k --user 0 com.miui.cloudservice
 echo 	thememanager
 	adb shell pm uninstall -k --user 0 com.android.thememanager
+echo 	funmax
+	adb shell pm uninstall -k --user 0 com.xiaomi.glgm
 
 
 ::Pause cmd
