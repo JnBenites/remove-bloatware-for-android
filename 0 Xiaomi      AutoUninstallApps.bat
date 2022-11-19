@@ -51,6 +51,8 @@ echo 	Google photos
 	adb shell pm uninstall -k --user 0 com.google.android.apps.photos
 echo 	Gmail
 	adb shell pm uninstall -k --user 0 com.google.android.gm
+echo 	pay
+	adb shell pm uninstall -k --user 0 org.mipay.android.manager
 
 echo ..... more apps
 echo 	android egg
