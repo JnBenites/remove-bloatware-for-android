@@ -100,6 +100,7 @@ goto start
     adb shell pm uninstall -k --user 0 com.samsung.android.coreapps
     adb shell pm uninstall -k --user 0 com.samsung.android.beaconmanager
     adb shell pm uninstall -k --user 0 com.samsung.android.app.simplesharing
+    adb shell pm uninstall -k --user 0 com.opera.max.oem
 
     echo Removing knox Bloatware ....
     adb shell pm uninstall -k --user 0 com.sec.knox.switcher
@@ -120,6 +121,7 @@ goto start
     adb shell pm disable-user com.xiaomi.scanner
     adb shell pm disable-user com.miui.notes
     adb shell pm disable-user com.miui.weather2
+    adb shell pm uninstall -k --user 0 com.mi.globalminusscreen
 
     adb shell pm uninstall -k --user 0 com.xiaomi.account
     adb shell pm uninstall -k --user 0 com.miui.android.fashiongallery
