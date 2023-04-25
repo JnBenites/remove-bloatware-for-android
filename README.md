@@ -4,11 +4,26 @@ A simple tool to uninstall multiple bloat apps with a single command. To run it 
 ### Requirements
 
 * Data cable
-* [Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)
+* <a href="https://developer.android.com/studio/releases/platform-tools" target="_blank">Android Debug Bridge (ADB)</a>
+
+## Script options for linux and windows
+#### 0 Clear screen
+* Clear screen (only for linux)
+#### 1 Checking for devices
+* Check if the device is connected
+#### 2. Save list for packages
+* Save list of names of applications installed on the device. -> packages.txt :page_facing_up:
+#### 3. Reboot System Now
+* Reboot the device quickly using ADB. :repeat:
+#### 4. Remove-bloatware
+* Uninstall bloat apps from Xiaomi, samsung, google, microsoft and more
+#### 5. Exit
+* Exit
 
 ## Screenshot
 
 <a><img src="https://i.postimg.cc/y6SqWYzC/capturadepantalla-linux.png" alt="capturadepantalla-linux"/></a> 
+
 <a><img src="https://i.postimg.cc/FzSw6GxH/capturadepantalla-windows.png" alt="capturadepantalla-windows"/></a><br/><br/>
 
 
@@ -25,20 +40,6 @@ Centos/Fedora/openSUSE
 ArchLinux y derivados
 
 ``sudo pacman -Sy android-tools``
-
-## Script options for linux and windows
-#### 0 Clear screen
-* Clear screen (only for linux)
-#### 1 Checking for devices
-* Check if the device is connected
-#### 2. Save list for packages
-* Save list of names of applications installed on the device. -> packages.txt :page_facing_up:
-#### 3. Reboot System Now
-* Reboot the device quickly using ADB. :repeat:
-#### 4. Remove-bloatware
-* Uninstall bloat apps from Xiaomi, samsung, google, microsoft and more
-#### 5. Exit
-* Exit
 
 ## File organitation in windows
 ```
