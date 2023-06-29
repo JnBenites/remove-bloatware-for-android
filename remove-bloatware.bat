@@ -135,9 +135,10 @@ goto start
     adb shell pm uninstall -k --user 0 com.miui.cloudservice
     adb shell pm uninstall -k --user 0 com.xiaomi.glgm
     adb shell pm uninstall -k --user 0 com.xiaomi.payment4
-    adb shell pm uninstall -k --user 0 com.miui.securitycenter
-    adb shell pm uninstall -k --user 0 com.miui.guardprovider
-    adb shell pm uninstall -k --user 0 com.miui.securitycore
+    
+    ::#adb shell pm uninstall -k --user 0 com.miui.securitycenter
+    ::#adb shell pm uninstall -k --user 0 com.miui.guardprovider
+    ::#adb shell pm uninstall -k --user 0 com.miui.securitycore
     echo More apps ....
     adb shell pm uninstall -k --user 0 com.android.egg
     adb shell pm uninstall -k --user 0 com.android.providers.partnerbookmarks
