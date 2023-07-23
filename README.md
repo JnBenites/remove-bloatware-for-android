@@ -1,87 +1,48 @@
-## Remove-bloatware-for-android
+# Remove-bloatware-for-android
+
 A simple tool to uninstall multiple bloat apps with a single command. To run it requires Android Debug Bridge (ADB).
 
-### Requirements
+## Requirements
 
 * Data cable
-* <a href="https://developer.android.com/studio/releases/platform-tools" target="_blank">Android Debug Bridge (ADB)</a>
+* [Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)
 
-## Script options for linux and windows
-#### 0 Clear screen
-* Clear screen (only for linux)
-#### 1 Checking for devices
+## Script options for Linux and Windows
+
+#### 0. Exit
+* Clear screen (only for Linux)
+
+#### 1. Checking for devices
 * Check if the device is connected
+
 #### 2. Save list for packages
-* Save list of names of applications installed on the device. -> packages.txt :page_facing_up:
-#### 3. Reboot System Now
-* Reboot the device quickly using ADB. :repeat:
-#### 4. Remove-bloatware
-* Uninstall bloat apps from Xiaomi, samsung, google, microsoft and more
-#### 5. Exit
-* Exit
+* Save a list of names of applications installed on the device. -> packages.txt 📄
 
-## Screenshot
+#### 3. Remove Facebook bloatware
+* Uninstall Facebook bloatware
 
-<a><img src="https://i.postimg.cc/y6SqWYzC/capturadepantalla-linux.png" alt="capturadepantalla-linux"/></a> 
+#### 4. Remove Google bloatware
+* Uninstall Google bloatware
 
-<a><img src="https://i.postimg.cc/FzSw6GxH/capturadepantalla-windows.png" alt="capturadepantalla-windows"/></a><br/><br/>
+#### 5. Remove Microsoft bloatware
+* Uninstall Microsoft bloatware
 
+#### 6. Removing Xiaomi Bloatware
+* Uninstall Xiaomi bloatware
 
-## Linux
+#### 7. Removing Bloatware extra
+* Uninstall extra bloatware 
 
-Debian/Ubuntu
+`- DANGER: Can corrupt your system completely -`
 
-``sudo apt install android-tools-adb``
+#### 8. Removing miui securitycenter
+* Uninstall miui securitycenter bloatware
 
-Centos/Fedora/openSUSE
-
-``sudo dnf install android-tools``
-
-ArchLinux y derivados
-
-``sudo pacman -Sy android-tools``
-
-## File organitation in windows
-```
-    README
-    LICENCIE
-    Remove-bloatware   <-- Executable
-    adb
-    AdbWinApi.dll
-    AdbWinUsbApi.dll
-    dmtracedump
-    etc1tool
-    fastboot
-    hprof-conv
-    libwinpthread-1.dll
-    make_f2fs
-    make_f2fs_casefold
-    mke2fs.conf
-    mke2fs
-    NOTICE
-    source
-    sqlite3
-```
-## For linux
-Unzip and move the platform-tools folder to /opt/
-
-``
-/opt/
-``
-
-give permissions to .sh script
-
-``
-sudo chmod +x remove-bloatware.sh
-``
-
-run script
-
-``
-./remove-bloatware.sh
-``
+#### 9. Removing Samsung Knox
+* Uninstall Samsung Knox bloatware
 
 ## Contributions
 Issues will be fixed asap. Pull Request Welcomed
 https://github.com/JnBenites/Remove-bloatware-for-android/issues
+
 

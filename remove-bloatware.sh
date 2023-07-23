@@ -1,139 +1,102 @@
 #!/bin/bash
 
-while :
-do
+while true; do
+    clear
     echo "Select an option:"
     echo ""
-    echo "0. Clear screen"
-    echo "1. Check for devices"
-    echo "2. Save list of packages"
-    echo "3. Reboot device"
-    echo "4. Remove bloatware"
-    echo "5. Exit"
+    echo "0. Exit"
+    echo "1. Checking for devices"
+    echo "2. Save list for packages"
+    echo ""
+    echo "3. Remove Facebook bloatware"
+    echo "4. Remove Google bloatware"
+    echo "5. Remove Microsoft bloatware"
+    echo "6. Removing Xiaomi Bloatware"
+    echo "7. Removing Bloatware extra"
+    echo "- DANGER Can corrupt your system completely DANGER -"
+    echo "8. Removing miui securitycenter"
+    echo "9. Removing Samsung Knox"
     echo ""
 
-    read -p "Enter option [1-5]: " option
+    read -p "Enter the number of the option you want: " option
 
     case $option in
         0)
-            Clear
+            echo "Bye"
+            exit
             ;;
         1)
             echo "Checking for devices..."
             adb devices
+            read -n 1 -s -r -p "Press any key to continue..."
             ;;
         2)
-            echo "Saving list of packages..."
-            adb shell pm list packages >> packages.txt
+            echo "Save list for packages..."
+            adb shell pm list packages > ListPackages.txt
+            echo "List saved in packages.txt"
+            echo "done"
+            read -n 1 -s -r -p "Press any key to continue..."
             ;;
         3)
-            echo "Rebooting device..."
-            adb reboot
-            ;;
-        4)
-            echo "Removing bloatware..."
-            echo "Removing Facebook Bloatware ..... "
-            adb shell pm uninstall -k --user 0 com.android.providers.partnerbookmarks
+            echo "Remove Facebook bloatware..."
             adb shell pm uninstall -k --user 0 com.facebook.katana
             adb shell pm uninstall -k --user 0 com.facebook.appmanager
             adb shell pm uninstall -k --user 0 com.facebook.services
             adb shell pm uninstall -k --user 0 com.facebook.system
-
-            echo "Google apps ..... "
-            adb shell pm uninstall -k --user 0 com.google.android.setupwizard
-            adb shell pm uninstall -k --user 0 com.google.android.googlequicksearchbox
+            read -n 1 -s -r -p "Press any key to continue..."
+            ;;
+        4)
+            echo "Remove Google bloatware..."
+            adb shell pm uninstall -k --user 0 com.android.chrome
+            adb shell pm uninstall -k --user 0 com.android.hotwordenrollment.google
+            adb shell pm uninstall -k --user 0 com.android.stk
+            adb shell pm uninstall -k --user 0 com.google.android.apps.docs
             adb shell pm uninstall -k --user 0 com.google.android.apps.googleassistant
+            adb shell pm uninstall -k --user 0 com.google.android.apps.magazines
+            adb shell pm uninstall -k --user 0 com.google.android.apps.maps
+            adb shell pm uninstall -k --user 0 com.google.android.apps.photos
             adb shell pm uninstall -k --user 0 com.google.android.apps.podcasts
             adb shell pm uninstall -k --user 0 com.google.android.apps.subscriptions.red
-            adb shell pm uninstall -k --user 0 com.google.android.apps.magazines
-            adb shell pm uninstall -k --user 0 com.google.android.apps.podcasts
-            adb shell pm uninstall -k --user 0 com.android.hotwordenrollment.xgoogle
-            adb shell pm uninstall -k --user 0 com.google.android.apps.youtube.music
-            adb shell pm uninstall -k --user 0 com.google.android.youtube
             adb shell pm uninstall -k --user 0 com.google.android.apps.tachyon
             adb shell pm uninstall -k --user 0 com.google.android.apps.walletnfcrel
-            adb shell pm uninstall -k --user 0 com.android.chrome
-            adb shell pm uninstall -k --user 0 com.google.android.apps.walletnfcrel
-            adb shell pm uninstall -k --user 0 com.google.android.apps.photos
+            adb shell pm uninstall -k --user 0 com.google.android.googlequicksearchbox
             adb shell pm uninstall -k --user 0 com.google.android.gm
-            adb shell pm uninstall -k --user 0 org.mipay.android.manager
-            adb shell pm uninstall -k --user 0 com.google.android.apps.maps
-            adb shell pm uninstall -k --user 0 com.google.android.apps.docs
+            adb shell pm uninstall -k --user 0 com.google.android.setupwizard
             adb shell pm uninstall -k --user 0 com.google.android.videos
-            adb shell pm uninstall -k --user 0 com.android.stk
-            
-            echo "Removing Microsoft Bloatware ..... "
+            adb shell pm uninstall -k --user 0 com.google.android.youtube
+            adb shell pm uninstall -k --user 0 org.mipay.android.manager
+            adb shell pm uninstall -k --user 0 com.google.android.apps.youtube.music
+            read -n 1 -s -r -p "Press any key to continue..."
+            ;;
+        5)
+            echo "Removing Microsoft Bloatware..."
             adb shell pm uninstall -k --user 0 com.microsoft.office.excel
-            adb shell pm uninstall -k --user 0 com.microsoft.skydrive
-            adb shell pm uninstall -k --user 0 com.microsoft.office.word
-            adb shell pm uninstall -k --user 0 com.microsoft.office.powerpoint
             adb shell pm uninstall -k --user 0 com.microsoft.office.onenote
-
-            echo "Removing samsung Bloatware  ..... "
-            adb shell pm uninstall -k --user 0 flipboard.boxer.app
-            adb shell pm uninstall -k --user 0 com.samsung.android.weather
-            adb shell pm uninstall -k --user 0 com.samsung.android.easysetup
-            adb shell pm uninstall -k --user 0 com.samsung.android.app.notes
-            adb shell pm uninstall -k --user 0 com.samsung.android.app.galaxyfinder
-            adb shell pm uninstall -k --user 0 com.samsung.knox.securefolder.setuppage
-            adb shell pm uninstall -k --user 0 com.samsung.knox.securefolder
-            adb shell pm uninstall -k --user 0 com.samsung.android.voc
-            adb shell pm uninstall -k --user 0 com.samsung.android.email.provider
-            adb shell pm uninstall -k --user 0 com.samsung.android.scloud
-            adb shell pm uninstall -k --user 0 com.sec.android.widgetapp.samsungapps
-            adb shell pm uninstall -k --user 0 com.sec.android.app.samsungapps
-            adb shell pm uninstall -k --user 0 com.sec.android.daemonapp
-            adb shell pm uninstall -k --user 0 com.sec.android.app.voicenote
-            adb shell pm uninstall -k --user 0 com.sec.android.service.health
-            adb shell pm uninstall -k --user 0 com.sec.android.app.sbrowser
-            adb shell pm uninstall -k --user 0 com.sec.android.app.fm
-            adb shell pm uninstall -k --user 0 com.sec.android.soagent
-            adb shell pm uninstall -k --user 0 com.sec.android.app.shealth
-            adb shell pm uninstall -k --user 0 com.sec.android.widgetapp.webmanual
-            adb shell pm uninstall -k --user 0 com.linkedin.android
-            adb shell pm uninstall -k --user 0 com.samsung.android.coreapps
-            adb shell pm uninstall -k --user 0 com.samsung.android.beaconmanager
-            adb shell pm uninstall -k --user 0 com.samsung.android.app.simplesharing
-            adb shell pm uninstall -k --user 0 com.opera.max.oem
-
-            echo "Removing knox Bloatware ...."
-            adb shell pm uninstall -k --user 0 com.sec.knox.switcher
-            adb shell pm uninstall -k --user 0 com.samsung.knox.appsupdateagent
-            adb shell pm uninstall -k --user 0 com.sec.knox.foldercontainer
-            adb shell pm uninstall -k --user 0 com.samsung.knox.securefolder.setuppage
-            adb shell pm uninstall -k --user 0 com.samsung.knox.securefolder
-            adb shell pm uninstall -k --user 0 com.sec.knox.kss
-            adb shell pm uninstall -k --user 0 com.sec.knox.knoxsetupwizardclient
-
-            echo "Xiaomi apps ...."
-            #adb shell pm uninstall -k --user 0 com.caf.fmradio
-            #adb shell pm uninstall -k --user 0 com.miui.fm
-            #adb shell pm uninstall -k --user 0 com.miui.fmservice
-            #adb shell pm uninstall -k --user 0 com.android.thememanager
-            #adb shell pm uninstall -k --user 0 com.miui.player
-            #adb shell pm uninstall -k --user 0 com.xiaomi.discover
+            adb shell pm uninstall -k --user 0 com.microsoft.office.powerpoint
+            adb shell pm uninstall -k --user 0 com.microsoft.office.word
+            adb shell pm uninstall -k --user 0 com.microsoft.skydrive
+            read -n 1 -s -r -p "Press any key to continue..."
+            ;;
+        6)
+            echo "Removing Xiaomi Bloatware..."
+            echo Removing Xiaomi Bloatware
             adb shell pm disable-user com.xiaomi.scanner
             adb shell pm disable-user com.miui.notes
             adb shell pm disable-user com.miui.weather2
-            adb shell pm uninstall -k --user 0 com.mi.globalminusscreen
-
-            adb shell pm uninstall -k --user 0 com.xiaomi.account
-            adb shell pm uninstall -k --user 0 com.miui.android.fashiongallery
-            adb shell pm uninstall -k --user 0 com.miui.cleaner
-            adb shell pm uninstall -k --user 0 com.miui.miservice
-            adb shell pm uninstall -k --user 0 com.xiaomi.midrop
-            adb shell pm uninstall -k --user 0 com.zhiliaoapp.musically
-            adb shell pm uninstall -k --user 0 com.xiaomi.micloud.sdk
-            adb shell pm uninstall -k --user 0 com.miui.micloudsync
-            adb shell pm uninstall -k --user 0 com.miui.cloudbackup
-            adb shell pm uninstall -k --user 0 com.miui.cloudservice
+            adb shell pm disable-user com.mi.globalbrowser
+            adb shell pm uninstall com.mi.global.bbs  
             adb shell pm uninstall -k --user 0 com.xiaomi.glgm
-            adb shell pm uninstall -k --user 0 com.xiaomi.payment4
-            
-            #adb shell pm uninstall -k --user 0 com.miui.securitycenter
-            #adb shell pm uninstall -k --user 0 com.miui.guardprovider
-            #adb shell pm uninstall -k --user 0 com.miui.securitycore
-            echo "More apps ...."
+            adb shell pm uninstall -k --user 0 com.miui.miservice
+            adb shell pm uninstall -k --user 0 com.xiaomi.discover
+            adb shell pm uninstall -k --user 0 com.mi.globalminusscreen
+            adb shell pm uninstall -k --user 0 com.miui.android.fashiongallery 
+            adb shell pm uninstall -k --user 0 android.autoinstalls.config.Xiaomi.qssi
+            #adb shell pm uninstall -k --user 0 com.miui.fm
+            #adb shell pm uninstall -k --user 0 com.miui.fmservice
+            read -n 1 -s -r -p "Press any key to continue..."
+            ;;
+        7)
+            echo "Removing Bloatware extra..."
             adb shell pm uninstall -k --user 0 com.android.egg
             adb shell pm uninstall -k --user 0 com.android.providers.partnerbookmarks
             adb shell pm uninstall -k --user 0 com.android.bookmarkprovider
@@ -146,13 +109,46 @@ do
             adb shell pm uninstall -k --user 0 cn.wps.moffice_eng
             adb shell pm uninstall -k --user 0 com.android.stk
             adb shell pm uninstall -k --user 0 com.csdroid.spkg
+            adb shell pm uninstall -k --user 0 com.zhiliaoapp.musically
+            adb shell pm uninstall -k --user 0 com.king.candycrushsaga
+            read -n 1 -s -r -p "Press any key to continue..."
             ;;
-        5)
-            echo "Exiting..."
-            break
+        8)
+            echo "Removing Securitycenter Bloatware..."
+            adb shell pm uninstall -k --user 0 com.miui.securitycenter
+            adb shell pm uninstall -k --user 0 com.miui.guardprovider
+            adb shell pm uninstall -k --user 0 com.miui.securitycore
+            adb shell pm uninstall -k --user 0 com.miui.cleaner
+            read -n 1 -s -r -p "Press any key to continue..."
+            ;;
+        9)
+            echo "Removing Samsung Knox..."
+            adb shell pm uninstall -k --user 0 com.samsung.knox.appsupdateagent
+            adb shell pm uninstall -k --user 0 com.sec.knox.foldercontainer
+            adb shell pm uninstall -k --user 0 com.sec.knox.knoxsetupwizardclient
+            adb shell pm uninstall -k --user 0 com.sec.knox.kss
+            adb shell pm uninstall -k --user 0 com.sec.knox.switcher
+            adb shell pm uninstall -k --user 0 com.samsung.knox.securefolder
+            adb shell pm uninstall -k --user 0 com.samsung.knox.securefolder.setuppage
+            read -n 1 -s -r -p "Press any key to continue..."
             ;;
         *)
             echo "Invalid option"
+            read -n 1 -s -r -p "Press any key to continue..."
             ;;
     esac
 done
+
+
+#EXTRA
+#adb shell pm uninstall -k --user 0 com.miui.fm
+#adb shell pm uninstall -k --user 0 com.miui.fmservice
+#adb shell pm uninstall -k --user 0 com.android.thememanager
+#adb shell pm uninstall -k --user 0 com.miui.player
+#adb shell pm uninstall -k --user 0 com.xiaomi.micloud.sdk
+#adb shell pm uninstall -k --user 0 com.miui.micloudsync
+#adb shell pm uninstall -k --user 0 com.miui.cloudbackup
+#adb shell pm uninstall -k --user 0 com.miui.cloudservice
+#adb shell pm uninstall -k --user 0 com.xiaomi.payment4
+#adb shell pm uninstall -k --user 0 com.xiaomi.account
+#adb shell pm uninstall -k --user 0 com.xiaomi.midrop
