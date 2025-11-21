@@ -89,6 +89,7 @@ goto start
     adb shell pm uninstall -k --user 0 com.microsoft.office.powerpoint
     adb shell pm uninstall -k --user 0 com.microsoft.office.word
     adb shell pm uninstall -k --user 0 com.microsoft.skydrive
+    adb shell pm uninstall -k --user 0 com.microsoft.office.officehubrow
     pause
 goto start
 
