@@ -90,6 +90,8 @@ goto start
     adb shell pm uninstall -k --user 0 com.microsoft.office.word
     adb shell pm uninstall -k --user 0 com.microsoft.skydrive
     adb shell pm uninstall -k --user 0 com.microsoft.office.officehubrow
+    adb shell pm uninstall -k --user 0 com.microsoft.office.outlook
+    adb shell pm uninstall -k --user 0 com.linkedin.android
     pause
 goto start
 
@@ -129,6 +131,16 @@ goto start
     adb shell pm uninstall -k --user 0 com.csdroid.spkg
     adb shell pm uninstall -k --user 0 com.zhiliaoapp.musically
     adb shell pm uninstall -k --user 0 com.king.candycrushsaga
+    adb shell pm uninstall -k --user 0 com.samsung.android.oneconnect
+    adb shell pm uninstall -k --user 0 com.sec.android.app.sbrowser
+    adb shell pm uninstall -k --user 0 com.samsung.android.app.watchmanagerstub
+    adb shell pm uninstall -k --user 0 com.sec.android.app.shealth
+    adb shell pm uninstall -k --user 0 com.opera.max.oem
+    adb shell pm uninstall -k --user 0 com.sec.android.app.samsungapps
+    adb shell pm uninstall -k --user 0 com.samsung.android.game.gamehome
+    adb shell pm uninstall -k --user 0 com.samsung.sree
+    adb shell pm uninstall -k --user 0 com.sec.android.daemonapp
+    adb shell pm uninstall -k --user 0 com.samsung.android.voc
     pause
 goto start
 
