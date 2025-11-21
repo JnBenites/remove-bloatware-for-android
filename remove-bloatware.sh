@@ -112,6 +112,8 @@ while true; do
             adb shell pm uninstall -k --user 0 com.csdroid.spkg
             adb shell pm uninstall -k --user 0 com.zhiliaoapp.musically
             adb shell pm uninstall -k --user 0 com.king.candycrushsaga
+            adb shell pm uninstall -k --user 0 com.samsung.android.app.omcagent
+            adb shell pm uninstall -k --user 0 com.samsung.android.mapsagent
             read -n 1 -s -r -p "Press any key to continue..."
             ;;
         8)
