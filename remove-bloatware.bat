@@ -106,6 +106,8 @@ goto start
     adb shell pm uninstall -k --user 0 com.mi.globalminusscreen
     adb shell pm uninstall -k --user 0 com.miui.android.fashiongallery 
     adb shell pm uninstall -k --user 0 android.autoinstalls.config.Xiaomi.qssi
+    adb shell pm uninstall -k --user 0 com.samsung.android.app.omcagent
+    adb shell pm uninstall -k --user 0 com.samsung.android.mapsagent
     ::adb shell pm uninstall -k --user 0 com.miui.fm
     ::adb shell pm uninstall -k --user 0 com.miui.fmservice
     pause
