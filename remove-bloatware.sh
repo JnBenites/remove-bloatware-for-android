@@ -76,6 +76,8 @@ while true; do
             adb shell pm uninstall -k --user 0 com.microsoft.office.word
             adb shell pm uninstall -k --user 0 com.microsoft.skydrive
             adb shell pm uninstall -k --user 0 com.microsoft.office.officehubrow
+            adb shell pm uninstall -k --user 0 com.microsoft.office.outlook
+            adb shell pm uninstall -k --user 0 com.linkedin.android
             read -n 1 -s -r -p "Press any key to continue..."
             ;;
         6)
@@ -114,6 +116,16 @@ while true; do
             adb shell pm uninstall -k --user 0 com.king.candycrushsaga
             adb shell pm uninstall -k --user 0 com.samsung.android.app.omcagent
             adb shell pm uninstall -k --user 0 com.samsung.android.mapsagent
+            adb shell pm uninstall -k --user 0 com.samsung.android.oneconnect
+            adb shell pm uninstall -k --user 0 com.sec.android.app.sbrowser
+            adb shell pm uninstall -k --user 0 com.samsung.android.app.watchmanagerstub
+            adb shell pm uninstall -k --user 0 com.sec.android.app.shealth
+            adb shell pm uninstall -k --user 0 com.opera.max.oem
+            adb shell pm uninstall -k --user 0 com.sec.android.app.samsungapps
+            adb shell pm uninstall -k --user 0 com.samsung.android.game.gamehome
+            adb shell pm uninstall -k --user 0 com.samsung.sree
+            adb shell pm uninstall -k --user 0 com.sec.android.daemonapp
+            adb shell pm uninstall -k --user 0 com.samsung.android.voc
             read -n 1 -s -r -p "Press any key to continue..."
             ;;
         8)
